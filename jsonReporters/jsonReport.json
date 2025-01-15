@@ -1,0 +1,156 @@
+{
+  "config": {
+    "configFile": "F:\\BS_Playwright\\playwright.config.ts",
+    "rootDir": "F:/BS_Playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReporters/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "F:/BS_Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "F:/BS_Playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "test/addToCartUsingFixture.test.ts"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.49.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "test\\addToCartUsingFixture.test.ts",
+      "file": "test/addToCartUsingFixture.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Page object test demo",
+          "file": "test/addToCartUsingFixture.test.ts",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Checkout test_04",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 55264,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Welcome Message is written on that page : Welcome to our store\n"
+                        },
+                        {
+                          "text": "Cart is already empty.\n"
+                        },
+                        {
+                          "text": "Billing Address is written on that page: Billing address\n"
+                        },
+                        {
+                          "text": "Select Shipping Method is written on that page : Select shipping method\n"
+                        },
+                        {
+                          "text": "Select Payment Method is written on that page : Select payment method\n"
+                        },
+                        {
+                          "text": "Payment Information is written on that page : Payment information\n"
+                        },
+                        {
+                          "text": "Confirm Your Order is written on that page : Confirm your order\n"
+                        },
+                        {
+                          "text": "ThankYou Message is written on that page : Thank you\n"
+                        },
+                        {
+                          "text": "Order Information : Order information\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-15T10:34:15.671Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "F:\\BS_Playwright\\test-results\\test-addToCartUsingFixture-53b4b--test-demo-Checkout-test-04-chrome\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efc1f87caa5bbac2ce5a-5507d403f00aa37905ad",
+              "file": "test/addToCartUsingFixture.test.ts",
+              "line": 73,
+              "column": 6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-01-15T10:34:12.974Z",
+    "duration": 58934.235,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

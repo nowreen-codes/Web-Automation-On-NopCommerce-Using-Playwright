@@ -1,5 +1,7 @@
 import { Page } from "@playwright/test";
 
+const toJewelry="//a[contains (text(), 'Jewelry')] ";
+
 export default class HomePage{
 
 constructor(public page: Page){
@@ -7,9 +9,7 @@ constructor(public page: Page){
 async clickOnBooks(){
 await Promise.all([
 this.page.waitForNavigation({waitUntil:"networkidle"}),
-this.page.click("//a[contains (text(), 'Jewelry')] ")
-
-////input[@name='itemquantity1140' and @class='qty-input']
+this.page.click(toJewelry)
 ])
 }
 }

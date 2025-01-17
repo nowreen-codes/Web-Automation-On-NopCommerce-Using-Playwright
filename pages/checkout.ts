@@ -1,5 +1,31 @@
-
 import { Page,expect } from "@playwright/test";
+ 
+const billiingFirstName="//input[@type='text' and @name='BillingNewAddress.FirstName']";
+const billiingLastName="//input[@name='BillingNewAddress.LastName']";
+const billiingEmail="//input[@name='BillingNewAddress.Email']";
+const billingCompany="//input[@name='BillingNewAddress.Company']";
+const billingCountry="//select[@name='BillingNewAddress.CountryId']";
+const billingState="//select[@name='BillingNewAddress.StateProvinceId']";
+const billingCity="//input[@name='BillingNewAddress.City']";
+const billingAddress1="//input[@name='BillingNewAddress.Address1']";
+const billingAddress2="//input[@name='BillingNewAddress.Address2']";
+const billingZip="//input[@name='BillingNewAddress.ZipPostalCode']";
+const billingPhone="//input[@name='BillingNewAddress.PhoneNumber'] ";
+const billingFax="//input[@name='BillingNewAddress.FaxNumber'] ";
+const billingNextBtn="//button[@type='submit' and @id='billingaddress-next-button']";
+
+ 
+const shippingMethodGround="//input[@type='radio' and @value='Ground___Shipping.FixedByWeightByTotal']";
+const shippingMethodNextBtn="//button[@type='submit' and @class= 'button-1 shipping-method-next-step-button']";
+ 
+const paymentMethodCheckMoneyOrder="//input[@type='radio' and @value='Payments.CheckMoneyOrder' and @id='paymentmethod_4']";
+const paymentMethodNextBtn="//button[@type='submit' and @class='button-1 payment-method-next-step-button']";
+ 
+const paymentInfoNextBtn="//button[@type='submit' and @class='button-1 payment-info-next-step-button']";
+ 
+const confirmOrderNextBtn="//button[@type='submit' and @class='button-1 confirm-order-next-step-button']";
+const orderDetailsBtn="//a[contains(text(), 'Click here for order details.')]";
+
 
 export default class Checkout {
 
@@ -7,111 +33,90 @@ export default class Checkout {
     }
 
     async enterFirstName(firstname: string){
-        await this.page.locator("//input[@type='text' and @name='BillingNewAddress.FirstName']")
+        await this.page.locator(billiingFirstName)
         .type(firstname);
         }
 
     async enterLastName(lastname: string){
-        await this.page.locator("//input[@name='BillingNewAddress.LastName']")
+        await this.page.locator(billiingLastName)
         .type(lastname);
         }
 
     async enterEmail(email: string){
-        await this.page.locator("//input[@name='BillingNewAddress.Email']")
+        await this.page.locator(billiingEmail)
         .type(email);
         }
 
     async enterCompanyName(company: string){
-        await this.page.locator("//input[@name='BillingNewAddress.Company']")
+        await this.page.locator(billingCompany)
         .type(company);
         }
-
-   /* async enterCountryName(country: string){
-        await this.page.locator("//select[@name='BillingNewAddress.CountryId']")
-        .type(country);
-
-        await this.page.waitForTimeout(2000);
-        }
-
-         async enterStateName(state: string){
-         await this.page.locator("//select[@name='BillingNewAddress.StateProvinceId']")
-         .type(state);
-        }   
-*/
          async enterCountryName(country: string) {
-            const countryDropdown = this.page.locator("//select[@name='BillingNewAddress.CountryId']");
+            const countryDropdown = this.page.locator(billingCountry);
             await countryDropdown.selectOption({ 
                 label: country 
-            }); // Use selectOption to choose the country
-            // Wait for the state dropdown to update after country selection
-            await this.page.locator("//select[@name='BillingNewAddress.StateProvinceId']").waitFor({ state: 'visible' });
+            }); 
+            await this.page.locator(billingState).waitFor({ state: 'visible' });
         }
         
         async enterStateName(state: string) {
-            const stateDropdown = this.page.locator("//select[@name='BillingNewAddress.StateProvinceId']");
+            const stateDropdown = this.page.locator(billingState);
             await stateDropdown.selectOption({ 
                 label: state
-             }); // Use selectOption to choose the state
+             }); 
         } 
     async enterCityName(city: string){
-         await this.page.locator("//input[@name='BillingNewAddress.City']")
+         await this.page.locator(billingCity)
         .type(city);
         }  
     async enterAddress1(address1: string){
-        await this.page.locator("//input[@name='BillingNewAddress.Address1']")
+        await this.page.locator(billingAddress1)
         .type(address1);
          } 
 
     async enterAddress2(address2: string){
-        await this.page.locator("//input[@name='BillingNewAddress.Address2']")
+        await this.page.locator(billingAddress2)
         .type(address2);
         } 
 
     async enterZip(zip: string){
-    await this.page.locator("//input[@name='BillingNewAddress.ZipPostalCode']")
+    await this.page.locator(billingZip)
     .type(zip);
     } 
     
     async enterPhoneNo(phoneNo: string){
-    await this.page.locator("//input[@name='BillingNewAddress.PhoneNumber'] ")
+    await this.page.locator(billingPhone)
     .type(phoneNo);
                     
     } 
     async enterFaxNo(faxNo: string){
-    await this.page.locator("//input[@name='BillingNewAddress.FaxNumber'] ")
+    await this.page.locator(billingFax)
     .type(faxNo);
     } 
                 
     async clickNext(){
         await Promise.all([
             this.page.waitForNavigation({waitUntil:"networkidle"}),
-            this.page.click("//button[@type='submit' and @id='billingaddress-next-button']")
+            this.page.click(billingNextBtn)
             
         ]);
 
         
-        const radioButton = this.page.locator("//input[@type='radio' and @value='Ground___Shipping.FixedByWeightByTotal']");
+        const radioButton = this.page.locator(shippingMethodGround);
     await radioButton.waitFor({ state: 'visible' });
-
-    // Select the radio button
     await radioButton.check();
 
-        //input[@type='radio' and @value='Ground___Shipping.FixedByWeightByTotal']
-
-       //button[@type='submit' and @class= 'button-1 shipping-method-next-step-button']
-  
-    
     }
     
     async clickNext2() {
         
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),
-            this.page.click("//button[@type='submit' and @class= 'button-1 shipping-method-next-step-button']")
+            this.page.click(shippingMethodNextBtn)
         ]);
     
         
-        const radioButton = this.page.locator("//input[@type='radio' and @value='Payments.CheckMoneyOrder' and @id='paymentmethod_4']");
+        const radioButton = this.page.locator(paymentMethodCheckMoneyOrder);
      
         await radioButton.click();
     }
@@ -120,48 +125,30 @@ export default class Checkout {
         
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),
-            this.page.click("//button[@type='submit' and @class='button-1 payment-method-next-step-button']")
+            this.page.click(paymentMethodNextBtn)
         ]);
     
     }
-
-    //button[@type='submit' and @class='button-1 payment-info-next-step-button']
     async clickNext4() {
         
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),
-            this.page.click("//button[@type='submit' and @class='button-1 payment-info-next-step-button']")
+            this.page.click(paymentInfoNextBtn)
         ]);
     
     }  
-    //button[@type='submit' and @class='button-1 confirm-order-next-step-button']
-    async clickConfirmOrder() {
+        async clickConfirmOrder() {
         
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),
-            this.page.click("//button[@type='submit' and @class='button-1 confirm-order-next-step-button']")
+            this.page.click(confirmOrderNextBtn)
         ]);
     
     }  
-
-    /*async verifyThankYouMessage() {
-        const firstMsg = await this.page.locator("//h1[contains(text(), 'Thank you')]");
-        const secondMsg = await this.page.locator("//strong[contains(text(), 'Your order has been successfully processed!')]");
-    
-        // Wait for the message to appear
-        //await thankYouMessage.waitFor({ state: 'visible' });
-    
-        // Assert it is visible
-        expect(await firstMsg.isVisible()).toBe(true);
-        expect(await secondMsg.isVisible()).toBe(true);
-       
-    } */
-
     async clickConfirmOrderDetailsLink() {
-        //a[contains(text(), 'Click here for order details.')]
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),
-            this.page.click("//a[contains(text(), 'Click here for order details.')]")
+            this.page.click(orderDetailsBtn)
         ]);
     
     } 

@@ -1,26 +1,36 @@
 import { Page } from "@playwright/test";
+
+const jewelryCartIcon="//a[@class='ico-cart']";
+const jewelryEmptyCartMsg="//span[@class='cart-qty' and text()='(0)']";
+const jewelryRemoveCartProduct="//button[@name='updatecart' and @class='remove-btn']";
+const jewelryAddCartProduct="//button[contains(text(), 'Add to cart')]";
+const jewelryPopupMsg="//p[contains(text(), 'The product has been added')]";
+const jewelryCloseCart="//span[@class='close' and @title='Close']";
+const jewelryQuantityInput="//input[contains(@name, 'itemquantity') and contains(@class, 'qty-input')]";
+const jewelryUpdateCart="//button[@type='submit' and @name='updatecart']";
+const termsCondition="//input[@type='checkbox' and @name='termsofservice']";
+const checkoutButtonClick="//button[@type='submit' and @name='checkout']";
+
 export default class Jewelry {
 constructor(public page: Page) {
 }
 
 async clearCart() {
-const cartIcon = this.page.locator("//a[@class='ico-cart']");
+const cartIcon = this.page.locator(jewelryCartIcon);
 await cartIcon.hover();
 await cartIcon.click();
-    
-// Wait for the cart page to load
-const emptyCartMessage = this.page.locator("//span[@class='cart-qty' and text()='(0)']");
+const emptyCartMessage = this.page.locator(jewelryEmptyCartMsg);
 if (await emptyCartMessage.isVisible()) {
 console.log("Cart is already empty.");
 } else {
-// Dynamically update the locator inside the loop
+
  while (true) {
-const removeButtons = this.page.locator("//button[@name='updatecart' and @class='remove-btn']");
+const removeButtons = this.page.locator(jewelryRemoveCartProduct);
 const removeButtonCount = await removeButtons.count();
                 
 if (removeButtonCount === 0) {
 console.log("Your Shopping Cart is empty!");
-break; // Exit the loop when no more items are left
+break; 
 }
 await removeButtons.nth(0).click();
 await this.page.waitForTimeout(1000); 
@@ -28,69 +38,45 @@ await this.page.waitForTimeout(1000);
 }
 }
 
-
-
 async addFirstAndSecondProductsToCart() {
        
-const addFirstAndSecondProductsToCart = this.page.locator("//button[contains(text(), 'Add to cart')]");
+const addFirstAndSecondProductsToCart = this.page.locator(jewelryAddCartProduct);
         await addFirstAndSecondProductsToCart.nth(0).click();
-        const popupMessage1 = this.page.locator("//p[contains(text(), 'The product has been added to your')]");
+        const popupMessage1 = this.page.locator(jewelryPopupMsg);
         await popupMessage1.waitFor({ state: "visible" });
 
         
         await addFirstAndSecondProductsToCart.nth(1).click();
-        const popupMessage2 = this.page.locator("//p[contains(text(), 'The product has been added to your')]");
+        const popupMessage2 = this.page.locator(jewelryPopupMsg);
         await popupMessage2.waitFor({ state: "visible" });
 
         
-        const closeButton = this.page.locator("//span[@class='close' and @title='Close']");
+        const closeButton = this.page.locator(jewelryCloseCart);
         await closeButton.click();
 
-        const cartIcon = this.page.locator("//a[@class='ico-cart']");
+        const cartIcon = this.page.locator(jewelryCartIcon);
         await cartIcon.hover();
         await cartIcon.click();
-
-        
-        
-        // Select the 'terms of service' checkbox
-        //const termsCheckbox = this.page.locator("//input[@type='checkbox' and @name='termsofservice']");
-        //await termsCheckbox.check(); // Check the checkbox
-
-       // const termandconditionClose = this.page.locator("//button[@type='button' and @title='Close']");
-        // await termandconditionClose.click();
-
-       
-       //ajke katsi :''''')
-        //const checkoutButton = this.page.locator("//button[@type='submit' and @name='checkout']");
-        //await checkoutButton.click();
-
-
     }
 
 
     async updateQuantityForProduct(productName: string, quantity: number) {
     const productRow = this.page.locator(`//tr[contains(., '${productName}')]`); //. refers to the current node and its children
-    const quantityInput = productRow.locator("//input[contains(@name, 'itemquantity') and contains(@class, 'qty-input')]");
-    const updateCartButton = this.page.locator("//button[@type='submit' and @name='updatecart']");
+    const quantityInput = productRow.locator(jewelryQuantityInput);
+    const updateCartButton = this.page.locator(jewelryUpdateCart);
 
    
     await quantityInput.waitFor({ state: 'visible', timeout: 10000 });
 
    
-    await quantityInput.fill(''); // Clear existing value
+    await quantityInput.fill('');
     await quantityInput.fill(quantity.toString());
 
     
     await updateCartButton.click();
-
-
-    // Select the 'terms of service' checkbox
-    const termsCheckbox = this.page.locator("//input[@type='checkbox' and @name='termsofservice']");
+    const termsCheckbox = this.page.locator(termsCondition);
     await termsCheckbox.check(); 
-
-
-    //ajke katsi :''''')
-        const checkoutButton = this.page.locator("//button[@type='submit' and @name='checkout']");
+        const checkoutButton = this.page.locator(checkoutButtonClick);
         await checkoutButton.click();
 }
 

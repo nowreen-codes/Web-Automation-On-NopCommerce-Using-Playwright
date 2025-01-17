@@ -70,11 +70,11 @@
         {
           "title": "Page object test demo",
           "file": "test/addToCartUsingFixture.test.ts",
-          "line": 12,
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "Checkout test_04",
+              "title": "Checkout test",
               "ok": true,
               "tags": [],
               "tests": [
@@ -88,7 +88,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 55264,
+                      "duration": 59207,
                       "errors": [],
                       "stdout": [
                         {
@@ -121,12 +121,12 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-15T10:34:15.671Z",
+                      "startTime": "2025-01-17T04:06:38.182Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "F:\\BS_Playwright\\test-results\\test-addToCartUsingFixture-53b4b--test-demo-Checkout-test-04-chrome\\test-finished-1.png"
+                          "path": "F:\\BS_Playwright\\test-results\\test-addToCartUsingFixture-14e30-ect-test-demo-Checkout-test-chrome\\test-finished-1.png"
                         }
                       ]
                     }
@@ -134,9 +134,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "efc1f87caa5bbac2ce5a-5507d403f00aa37905ad",
+              "id": "efc1f87caa5bbac2ce5a-2a01fb57ba3cbc9723ce",
               "file": "test/addToCartUsingFixture.test.ts",
-              "line": 73,
+              "line": 52,
               "column": 6
             }
           ]
@@ -146,8 +146,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-15T10:34:12.974Z",
-    "duration": 58934.235,
+    "startTime": "2025-01-17T04:06:35.922Z",
+    "duration": 62876.173,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

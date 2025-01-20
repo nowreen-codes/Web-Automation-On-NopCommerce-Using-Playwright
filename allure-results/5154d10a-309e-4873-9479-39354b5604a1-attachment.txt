@@ -1,0 +1,9 @@
+Welcome Message is written on that page : Welcome to our store
+Your Shopping Cart is empty!
+Billing Address is written on that page: Billing address
+Select Shipping Method is written on that page : Select shipping method
+Select Payment Method is written on that page : Select payment method
+Payment Information is written on that page : Payment information
+Confirm Your Order is written on that page : Confirm your order
+ThankYou Message is written on that page : Thank you
+Order Information : Order information

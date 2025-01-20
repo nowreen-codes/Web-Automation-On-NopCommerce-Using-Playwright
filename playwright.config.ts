@@ -3,6 +3,7 @@ import { devices } from '@playwright/test';
 
 
 const config: PlaywrightTestConfig = {
+  timeout: 60 * 1000 * 5,
   projects: [
   {
       name: "chrome",

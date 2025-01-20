@@ -49,7 +49,7 @@ test("Add to cart test", async ({ page, loginPage, homePage, jewelry}) => {
    
 })
 
-test.only("Checkout test", async ({ page, loginPage, homePage, jewelry, checkout }) => {
+test.only("User able to place order successfully test", async ({ page, loginPage, homePage, jewelry, checkout }) => {
 
  await page.goto(baseURL);
 

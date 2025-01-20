@@ -14,15 +14,14 @@ const billingPhone="//input[@name='BillingNewAddress.PhoneNumber'] ";
 const billingFax="//input[@name='BillingNewAddress.FaxNumber'] ";
 const billingNextBtn="//button[@type='submit' and @id='billingaddress-next-button']";
 
- 
 const shippingMethodGround="//input[@type='radio' and @value='Ground___Shipping.FixedByWeightByTotal']";
 const shippingMethodNextBtn="//button[@type='submit' and @class= 'button-1 shipping-method-next-step-button']";
- 
+
 const paymentMethodCheckMoneyOrder="//input[@type='radio' and @value='Payments.CheckMoneyOrder' and @id='paymentmethod_4']";
 const paymentMethodNextBtn="//button[@type='submit' and @class='button-1 payment-method-next-step-button']";
- 
+
 const paymentInfoNextBtn="//button[@type='submit' and @class='button-1 payment-info-next-step-button']";
- 
+
 const confirmOrderNextBtn="//button[@type='submit' and @class='button-1 confirm-order-next-step-button']";
 const orderDetailsBtn="//a[contains(text(), 'Click here for order details.')]";
 

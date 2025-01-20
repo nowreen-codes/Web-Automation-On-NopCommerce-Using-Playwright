@@ -1,4 +1,5 @@
 import { Page } from "@playwright/test";
+import * as quantity from "../test-data/productQuantity-test-data.json";
 
 const jewelryCartIcon="//a[@class='ico-cart']";
 const jewelryEmptyCartMsg="//span[@class='cart-qty' and text()='(0)']";
@@ -6,6 +7,7 @@ const jewelryRemoveCartProduct="//button[@name='updatecart' and @class='remove-b
 const jewelryAddCartProduct="//button[contains(text(), 'Add to cart')]";
 const jewelryPopupMsg="//p[contains(text(), 'The product has been added')]";
 const jewelryCloseCart="//span[@class='close' and @title='Close']";
+
 const jewelryQuantityInput="//input[contains(@name, 'itemquantity') and contains(@class, 'qty-input')]";
 const jewelryUpdateCart="//button[@type='submit' and @name='updatecart']";
 const termsCondition="//input[@type='checkbox' and @name='termsofservice']";

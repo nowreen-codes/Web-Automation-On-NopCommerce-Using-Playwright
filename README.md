@@ -37,7 +37,10 @@ Reporting Tool: Allure
 
 ## Installation
 1.Node.js and Editor installation: Ensure you have Node.js installed. If not then install it from this [site](https://nodejs.org/en) . After installation to check if node is already installed or not, type “node --version” to check what is the node version.
-[Screenshot 2025-01-20 104807](https://github.com/user-attachments/assets/fe8f72de-e29e-41fb-a5bb-087b46473d64)
+
+
+![Screenshot 2025-01-20 104807](https://github.com/user-attachments/assets/01e3fe2d-c3f6-4998-8a9b-7d12cbb466eb)
+
 
 
 2.VS code editor: Installed VS code from our desired browser. 
@@ -46,6 +49,7 @@ Reporting Tool: Allure
 3.Playwright VS code plugins: Install “Playwright Test for VSCoc” from VS code extensions. Then type CTRL+SHIFT+P or from tab click View and choose “Command palette”, which will open command palette. Then type “install playwright” there and click the Enter button. 
 It will pop up on such screen like below. Click on “OK”. It will start downloading browser driver on the folder. 
 ![Screenshot 2025-01-20 105139](https://github.com/user-attachments/assets/121897d2-de65-4c73-967f-22cbc34e08bd)
+
 
 
 4.Clone the repository: git clone https://github.com/nowreen-codes/Web-Automation-On-NopCommerce-Using-Playwright.git

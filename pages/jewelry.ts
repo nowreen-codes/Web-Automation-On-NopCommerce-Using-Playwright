@@ -77,6 +77,7 @@ const addFirstAndSecondProductsToCart = this.page.locator(jewelryAddCartProduct)
     const termsCheckbox = this.page.locator(termsCondition);
     await termsCheckbox.check(); 
         const checkoutButton = this.page.locator(checkoutButtonClick);
+        //await this.page.waitForTimeout(2000); 
         await checkoutButton.click();
 }
 

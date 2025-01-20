@@ -35,11 +35,13 @@ export default class Checkout {
     async enterFirstName(firstname: string){
         await this.page.locator(billiingFirstName)
         .type(firstname);
+       // await this.page.waitForTimeout(2000); 
         }
 
     async enterLastName(lastname: string){
         await this.page.locator(billiingLastName)
         .type(lastname);
+       // await this.page.waitForTimeout(2000); 
         }
 
     async enterEmail(email: string){
@@ -94,7 +96,7 @@ export default class Checkout {
     .type(faxNo);
     } 
                 
-    async clickNext(){
+    async billingAddressNextButton(){
         await Promise.all([
             this.page.waitForNavigation({waitUntil:"networkidle"}),
             this.page.click(billingNextBtn)
@@ -108,7 +110,7 @@ export default class Checkout {
 
     }
     
-    async clickNext2() {
+    async shippingMethodNextStepButton() {
         
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),
@@ -121,7 +123,7 @@ export default class Checkout {
         await radioButton.click();
     }
 
-    async clickNext3() {
+    async paymentMethodNextStepButton() {
         
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),
@@ -129,7 +131,7 @@ export default class Checkout {
         ]);
     
     }
-    async clickNext4() {
+    async paymentInfoNextStepButton() {
         
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: "networkidle" }),

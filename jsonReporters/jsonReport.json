@@ -20,6 +20,10 @@
         null
       ],
       [
+        "F:\\BS_Playwright\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
         "json",
         {
           "outputFile": "jsonReporters/jsonReport.json"
@@ -48,9 +52,9 @@
         "testDir": "F:/BS_Playwright",
         "testIgnore": [],
         "testMatch": [
-          "test/addToCartUsingFixture.test.ts"
+          "test/checkoutDone.test.ts"
         ],
-        "timeout": 300000
+        "timeout": 30000
       }
     ],
     "shard": null,
@@ -61,25 +65,25 @@
   },
   "suites": [
     {
-      "title": "test\\addToCartUsingFixture.test.ts",
-      "file": "test/addToCartUsingFixture.test.ts",
+      "title": "test\\checkoutDone.test.ts",
+      "file": "test/checkoutDone.test.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "Page object test demo",
-          "file": "test/addToCartUsingFixture.test.ts",
+          "file": "test/checkoutDone.test.ts",
           "line": 7,
           "column": 6,
           "specs": [
             {
               "title": "Checkout test",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 300000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chrome",
@@ -87,55 +91,55 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 59207,
-                      "errors": [],
+                      "status": "timedOut",
+                      "duration": 31467,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "F:\\BS_Playwright\\test\\checkoutDone.test.ts",
+                            "column": 58,
+                            "line": 69
+                          },
+                          "message": "Error: locator.textContent: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 67 |\u001b[39m\n \u001b[90m 68 |\u001b[39m  \u001b[36mconst\u001b[39m \u001b[33mBilling_Address\u001b[39m \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//h1[text()='Billing address']\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 |\u001b[39m  \u001b[36mconst\u001b[39m \u001b[33mBilling_Address_ActualMsg\u001b[39m \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mBilling_Address\u001b[39m\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 |\u001b[39m  console\u001b[33m.\u001b[39mlog(\u001b[32m\"Billing Address is written on that page:\"\u001b[39m\u001b[33m,\u001b[39m \u001b[33mBilling_Address_ActualMsg\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m  expect(\u001b[33mBilling_Address_ActualMsg\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m\"Billing address\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 72 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\BS_Playwright\\test\\checkoutDone.test.ts:69:58\u001b[22m"
+                        }
+                      ],
                       "stdout": [
                         {
                           "text": "Welcome Message is written on that page : Welcome to our store\n"
                         },
                         {
-                          "text": "Cart is already empty.\n"
-                        },
-                        {
-                          "text": "Billing Address is written on that page: Billing address\n"
-                        },
-                        {
-                          "text": "Select Shipping Method is written on that page : Select shipping method\n"
-                        },
-                        {
-                          "text": "Select Payment Method is written on that page : Select payment method\n"
-                        },
-                        {
-                          "text": "Payment Information is written on that page : Payment information\n"
-                        },
-                        {
-                          "text": "Confirm Your Order is written on that page : Confirm your order\n"
-                        },
-                        {
-                          "text": "ThankYou Message is written on that page : Thank you\n"
-                        },
-                        {
-                          "text": "Order Information : Order information\n"
+                          "text": "Your Shopping Cart is empty!\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-17T04:06:38.182Z",
+                      "startTime": "2025-01-20T03:48:43.369Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "F:\\BS_Playwright\\test-results\\test-addToCartUsingFixture-14e30-ect-test-demo-Checkout-test-chrome\\test-finished-1.png"
+                          "path": "F:\\BS_Playwright\\test-results\\test-checkoutDone-Page-object-test-demo-Checkout-test-chrome\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\BS_Playwright\\test-results\\test-checkoutDone-Page-object-test-demo-Checkout-test-chrome\\video.webm"
                         }
                       ]
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "id": "efc1f87caa5bbac2ce5a-2a01fb57ba3cbc9723ce",
-              "file": "test/addToCartUsingFixture.test.ts",
+              "id": "e48b585e2cfc6f6af9fd-a2ae9d751769bcf1935a",
+              "file": "test/checkoutDone.test.ts",
               "line": 52,
               "column": 6
             }
@@ -146,11 +150,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-17T04:06:35.922Z",
-    "duration": 62876.173,
-    "expected": 1,
+    "startTime": "2025-01-20T03:48:40.790Z",
+    "duration": 35182.130999999994,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

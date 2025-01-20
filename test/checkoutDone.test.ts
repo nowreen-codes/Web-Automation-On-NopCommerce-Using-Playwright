@@ -64,6 +64,7 @@ test.only("Checkout test", async ({ page, loginPage, homePage, jewelry, checkout
  await jewelry.addFirstAndSecondProductsToCart();  
  await jewelry.updateQuantityForProduct("Vintage Style Engagement Ring", 3);
 //Billing Address
+
  const Billing_Address = await page.locator("//h1[text()='Billing address']");
  const Billing_Address_ActualMsg = await Billing_Address.textContent();
  console.log("Billing Address is written on that page:", Billing_Address_ActualMsg);
@@ -83,7 +84,7 @@ test.only("Checkout test", async ({ page, loginPage, homePage, jewelry, checkout
  await checkout.enterPhoneNo(data.phone);
  await checkout.enterFaxNo("");
  
- await checkout.clickNext();
+ await checkout.billingAddressNextButton();
 
  //Select Shipping Method
  const Select_Shipping_Method = await page.locator("//h1[text()='Select shipping method']");
@@ -91,7 +92,7 @@ test.only("Checkout test", async ({ page, loginPage, homePage, jewelry, checkout
  console.log("Select Shipping Method is written on that page :", Select_Shipping_Method_ActualMsg);
  expect(Select_Shipping_Method_ActualMsg).toBe("Select shipping method");
 
- await checkout.clickNext2();
+ await checkout.shippingMethodNextStepButton();
 
  //Select Payment Method
  const Select_Payment_Method = await page.locator("//h1[text()='Select payment method']");
@@ -99,7 +100,7 @@ test.only("Checkout test", async ({ page, loginPage, homePage, jewelry, checkout
  console.log("Select Payment Method is written on that page :", Select_Payment_Method_ActualMsg);
  expect(Select_Payment_Method_ActualMsg).toBe("Select payment method");
 
- await checkout.clickNext3();  
+ await checkout.paymentMethodNextStepButton();  
 
  //Payment Information
  const Payment_Information = await page.locator("//h1[text()='Payment information']");
@@ -107,7 +108,7 @@ test.only("Checkout test", async ({ page, loginPage, homePage, jewelry, checkout
  console.log("Payment Information is written on that page :", Payment_Information_ActualMsg);
  expect(Payment_Information_ActualMsg).toBe("Payment information");
 
- await checkout.clickNext4();
+ await checkout.paymentInfoNextStepButton();
 
  //Order Confirmation
  const Confirm_Your_Order = await page.locator("//h1[text()='Confirm your order']");

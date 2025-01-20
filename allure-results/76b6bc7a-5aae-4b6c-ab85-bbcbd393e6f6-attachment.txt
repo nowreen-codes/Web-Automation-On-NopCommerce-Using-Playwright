@@ -1,0 +1,3 @@
+Welcome Message is written on that page : Welcome to our store
+Cart is already empty.
+Billing Address is written on that page: Billing address

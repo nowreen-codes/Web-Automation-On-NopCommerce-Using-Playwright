@@ -4,5 +4,12 @@
     "email": "nou@gmail.com",
     "company": "BS",
     "password": "123",
-    "confirmpassword": "123"
+    "confirmpassword": "123",
+    "dateOfBirth": {
+        "day": "25",
+        "month": "8", 
+        "year": "1915"
+    }  
+
+    
 }

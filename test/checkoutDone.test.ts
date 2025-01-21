@@ -1,6 +1,8 @@
 import { expect, test } from "../base/fixture";
-import * as data from "../test-data/billingAddress-test-data.json"
-import * as data1 from "../test-data/registration-test-data.json"
+import * as data from "../test-data/billingAddress-test-data.json";
+import * as data1 from "../test-data/registration-test-data.json";
+import * as data2 from "../test-data/productQuantity-test-data.json"
+
 const email = "nou@gmail.com";
 const password = "q123#hsjueA";
 const baseURL="https://test460.nop-station.com/en/"
@@ -12,7 +14,10 @@ await page.goto(baseURL);
 await registrationPage.registerStart();
 await registrationPage.enterFirstName(data1.firstname);
 await registrationPage.enterLasttName(data1.lastname);
-await registrationPage.DateOfBirth("25.08.1850");
+
+await registrationPage.selectDayOfBirth(data1.dateOfBirth.day);
+await registrationPage.selectMonthOfBirth(data1.dateOfBirth.month);
+await registrationPage.selectYearOfBirth(data1.dateOfBirth.year);
 await registrationPage.enterEmail(email);
 await registrationPage.enterCompanyDetails("");
 await registrationPage.enterOptions();
@@ -25,31 +30,29 @@ await registrationPage.clickRegister();
 test("Login using valid credentials", async ({ page, loginPage }) => {
     await page.goto(baseURL);
 
-    await loginPage.enterEmail(email);
-    await loginPage.enterPassword(password);
-    await loginPage.checkedRememberMe();
-    await loginPage.clickLogin();
-    const welcomeMsg = await page.locator("//h2[text()='Welcome to our store']");
-    const actualMsg = await welcomeMsg.textContent();
-    console.log("Actual Welcome Message:", actualMsg);
-    expect(actualMsg).toBe("Welcome to our store");
-
+ await loginPage.loginStart();
+ await loginPage.login(email, password);
+ const welcomeMsg = await page.locator("//h2[text()='Welcome to our store']");
+ const actualMsg = await welcomeMsg.textContent();
+ console.log("Welcome Message is written on that page :", actualMsg);
+ expect(actualMsg).toBe("Welcome to our store");
 
 })
 
-test("Add to cart test", async ({ page, loginPage, homePage, jewelry}) => {
-    await page.goto("https://test460.nop-station.com/en/login?returnUrl=%2Fen%2F");
+ test("Add to cart test", async ({ page, loginPage, homePage, jewelry}) => {
+    await page.goto(baseURL);
+    await loginPage.loginStart();
     await loginPage.login(email, password);
     await jewelry.clearCart();
 
     await homePage.clickOnBooks();
     await jewelry.addFirstAndSecondProductsToCart();
 
-    await jewelry.updateQuantityForProduct("Vintage Style Engagement Ring", 3);
+    await jewelry.updateQuantityForProduct("Vintage Style Engagement Ring", 7);
    
-})
+}) 
 
-test.only("User able to place order successfully test", async ({ page, loginPage, homePage, jewelry, checkout }) => {
+test("User able to place order successfully test", async ({ page, loginPage, homePage, jewelry, checkout }) => {
 
  await page.goto(baseURL);
 
@@ -62,7 +65,9 @@ test.only("User able to place order successfully test", async ({ page, loginPage
  await jewelry.clearCart();
  await homePage.clickOnBooks();
  await jewelry.addFirstAndSecondProductsToCart();  
- await jewelry.updateQuantityForProduct("Vintage Style Engagement Ring", 3);
+ await jewelry.updateQuantityForProduct("Vintage Style Engagement Ring",3);
+
+ 
 //Billing Address
 
  const Billing_Address = await page.locator("//h1[text()='Billing address']");

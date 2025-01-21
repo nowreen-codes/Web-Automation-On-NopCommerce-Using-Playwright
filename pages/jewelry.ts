@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import * as quantity from "../test-data/productQuantity-test-data.json";
+//import * as quantity from "../test-data/productQuantity-test-data.json";
 
 const jewelryCartIcon="//a[@class='ico-cart']";
 const jewelryEmptyCartMsg="//span[@class='cart-qty' and text()='(0)']";
@@ -79,7 +79,7 @@ const addFirstAndSecondProductsToCart = this.page.locator(jewelryAddCartProduct)
     const termsCheckbox = this.page.locator(termsCondition);
     await termsCheckbox.check(); 
         const checkoutButton = this.page.locator(checkoutButtonClick);
-        //await this.page.waitForTimeout(2000); 
+        await this.page.waitForTimeout(2000); 
         await checkoutButton.click();
 }
 

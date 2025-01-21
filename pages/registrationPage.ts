@@ -4,7 +4,13 @@ const registerStart = "//a[@class='ico-register']";
 const registerGender = "//input[@type='radio' and contains(@value, 'F')] ";
 const registerFirstName = "//input[@name= 'FirstName']";
 const registerLastName = "//input[@name= 'LastName'] ";
-const registerDateOfBirth = "//select[@name='DateOfBirthDay']";
+
+
+const registerDayOfBirth = "//select[@name='DateOfBirthDay']";
+const registerMonthOfBirth = "//select[@name='DateOfBirthMonth']";
+const registerYearOfBirth = "//select[@name='DateOfBirthYear']";
+
+
 const registerEmail = "//input[@name='Email'] ";
 const registerCompany = "//input[@name='Company'] ";
 const registerNewsletter = "//input[@type='checkbox' and @name='Newsletter'] ";
@@ -38,9 +44,18 @@ export default class RegisterPage{
         .type(lastname);
         }
 
-        async DateOfBirth(dateofbirth: string){
-        await this.page.locator(registerDateOfBirth)
-        .type(dateofbirth)
+        async selectDayOfBirth(day: string) {
+            await this.page.selectOption(registerDayOfBirth, { value: day });
+        }
+    
+        
+        async selectMonthOfBirth(month: string) {
+            await this.page.selectOption(registerMonthOfBirth, { value: month });
+        }
+    
+        
+        async selectYearOfBirth(year: string) {
+            await this.page.selectOption(registerYearOfBirth, { value: year });
         }
 
         async enterEmail(email: string){

@@ -31,6 +31,9 @@ export default class Checkout {
     constructor(public page: Page) {
     }
 
+
+    
+
     async enterFirstName(firstname: string){
         await this.page.locator(billiingFirstName)
         .type(firstname);

@@ -1,2 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","30399","Checkout test","chrome","Fri Jan 17 17:14:45 GMT+06:00 2025","broken","Fri Jan 17 17:15:15 GMT+06:00 2025","Page object test demo","test\checkoutDone.test.ts","",""
+"","10203","Login using valid credentials","chrome","Tue Jan 21 09:09:19 GMT+06:00 2025","passed","Tue Jan 21 09:09:29 GMT+06:00 2025","Page object test demo","test\checkoutDone.test.ts","",""
+"","18405","Registration using valid credentials","chrome","Tue Jan 21 09:09:00 GMT+06:00 2025","passed","Tue Jan 21 09:09:18 GMT+06:00 2025","Page object test demo","test\checkoutDone.test.ts","",""
+"","66652","User able to place order successfully test","chrome","Tue Jan 21 09:10:05 GMT+06:00 2025","passed","Tue Jan 21 09:11:12 GMT+06:00 2025","Page object test demo","test\checkoutDone.test.ts","",""
+"","35691","Add to cart test","chrome","Tue Jan 21 09:09:29 GMT+06:00 2025","passed","Tue Jan 21 09:10:05 GMT+06:00 2025","Page object test demo","test\checkoutDone.test.ts","",""

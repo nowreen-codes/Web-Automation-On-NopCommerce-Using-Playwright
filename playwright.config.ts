@@ -24,9 +24,6 @@ const config: PlaywrightTestConfig = {
 
   testMatch: ["test/checkoutDone.test.ts"], // Verify path
   use: {
-  
-
-
     headless: false,
     screenshot: "on", // "only-on-failure" can be used as well
     video: "retain-on-failure",

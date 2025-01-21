@@ -74,11 +74,11 @@
         {
           "title": "Page object test demo",
           "file": "test/checkoutDone.test.ts",
-          "line": 7,
+          "line": 9,
           "column": 6,
           "specs": [
             {
-              "title": "User able to place order successfully test",
+              "title": "Login using valid credentials",
               "ok": true,
               "tags": [],
               "tests": [
@@ -92,45 +92,21 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 63103,
+                      "duration": 10635,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "Welcome Message is written on that page : Welcome to our store\n"
-                        },
-                        {
-                          "text": "Cart is already empty.\n"
-                        },
-                        {
-                          "text": "Billing Address is written on that page: Billing address\n"
-                        },
-                        {
-                          "text": "Select Shipping Method is written on that page : Select shipping method\n"
-                        },
-                        {
-                          "text": "Select Payment Method is written on that page : Select payment method\n"
-                        },
-                        {
-                          "text": "Payment Information is written on that page : Payment information\n"
-                        },
-                        {
-                          "text": "Confirm Your Order is written on that page : Confirm your order\n"
-                        },
-                        {
-                          "text": "ThankYou Message is written on that page : Thank you\n"
-                        },
-                        {
-                          "text": "Order Information : Order information\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-20T09:25:21.343Z",
+                      "startTime": "2025-01-21T03:23:16.577Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "F:\\BS_Playwright\\test-results\\test-checkoutDone-Page-obj-28543-ace-order-successfully-test-chrome\\test-finished-1.png"
+                          "path": "F:\\BS_Playwright\\test-results\\test-checkoutDone-Page-obj-921f9-gin-using-valid-credentials-chrome\\test-finished-1.png"
                         }
                       ]
                     }
@@ -138,9 +114,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "e48b585e2cfc6f6af9fd-3d624a7e857f094e699d",
+              "id": "e48b585e2cfc6f6af9fd-74954cbd336ac94005c4",
               "file": "test/checkoutDone.test.ts",
-              "line": 52,
+              "line": 30,
               "column": 6
             }
           ]
@@ -150,8 +126,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-20T09:25:17.771Z",
-    "duration": 68036.72799999999,
+    "startTime": "2025-01-21T03:23:13.292Z",
+    "duration": 14852.229,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

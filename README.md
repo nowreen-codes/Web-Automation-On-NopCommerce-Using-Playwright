@@ -155,6 +155,13 @@ Allure Reporting: Generates detailed reports for test execution.
 
 
 
+![Screenshot 2025-01-21 120013](https://github.com/user-attachments/assets/170dffcd-0589-418c-932e-30fb99f2b8ac)
+
+
+
+
+
+
 
 
 ## Contributing

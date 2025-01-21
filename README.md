@@ -108,6 +108,25 @@ Terminal Output: Displays pass/fail results for quick verification.
 Allure Reporting: Generates detailed reports for test execution.
 
 
+
+### Output
+
+
+
+[Screenshot 2025-01-21 091243](https://github.com/user-attachments/assets/6b465241-5814-4031-9cc0-fe24b2b214c9)
+
+
+
+
+
+[Screenshot 2025-01-21 091322](https://github.com/user-attachments/assets/bd875262-e98e-4e3f-86ce-bf304338117d)
+
+
+
+
+[image](https://github.com/user-attachments/assets/6e12b902-15c6-4b29-b8e1-e09bd0b2273f)
+
+
 ## Contributing
 Contributions are welcome! Follow these steps:
 

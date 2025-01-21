@@ -113,18 +113,48 @@ Allure Reporting: Generates detailed reports for test execution.
 
 
 
-[Screenshot 2025-01-21 091243](https://github.com/user-attachments/assets/6b465241-5814-4031-9cc0-fe24b2b214c9)
+
+
+![Allure Report 1](https://github.com/user-attachments/assets/a637daed-d884-4dfd-93f1-77a9e7e9f39d)
 
 
 
 
 
-[Screenshot 2025-01-21 091322](https://github.com/user-attachments/assets/bd875262-e98e-4e3f-86ce-bf304338117d)
 
 
 
 
-[image](https://github.com/user-attachments/assets/6e12b902-15c6-4b29-b8e1-e09bd0b2273f)
+
+
+![Allure Report 2](https://github.com/user-attachments/assets/b35f14ac-0aa8-4074-b76d-51ec6791d35f)
+
+
+
+
+
+
+
+
+
+
+![Successfully Registered](https://github.com/user-attachments/assets/21340cf2-703c-494a-995b-251f296c8126)
+
+
+
+
+
+
+
+
+
+![User Can Successfully Ordered](https://github.com/user-attachments/assets/c5aa3713-3c3d-444c-980e-bd9e8dde1d67)
+
+
+
+
+
+
 
 
 ## Contributing

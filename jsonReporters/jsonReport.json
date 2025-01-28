@@ -78,6 +78,44 @@
           "column": 6,
           "specs": [
             {
+              "title": "Registration using valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 23170,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-21T05:57:14.704Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "F:\\BS_Playwright\\test-results\\test-checkoutDone-Page-obj-4e4f9-ion-using-valid-credentials-chrome\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e48b585e2cfc6f6af9fd-f4ba31769c90dec663fa",
+              "file": "test/checkoutDone.test.ts",
+              "line": 12,
+              "column": 5
+            },
+            {
               "title": "Login using valid credentials",
               "ok": true,
               "tags": [],
@@ -92,7 +130,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 10635,
+                      "duration": 10208,
                       "errors": [],
                       "stdout": [
                         {
@@ -101,7 +139,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-21T03:23:16.577Z",
+                      "startTime": "2025-01-21T05:57:40.580Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -117,7 +155,115 @@
               "id": "e48b585e2cfc6f6af9fd-74954cbd336ac94005c4",
               "file": "test/checkoutDone.test.ts",
               "line": 30,
+              "column": 5
+            },
+            {
+              "title": "Add to cart test",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 31086,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Cart is already empty.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-21T05:57:50.814Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "F:\\BS_Playwright\\test-results\\test-checkoutDone-Page-object-test-demo-Add-to-cart-test-chrome\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e48b585e2cfc6f6af9fd-a64bbcc6eb2cc72825ff",
+              "file": "test/checkoutDone.test.ts",
+              "line": 42,
               "column": 6
+            },
+            {
+              "title": "User able to place order successfully test",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 65068,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Welcome Message is written on that page : Welcome to our store\n"
+                        },
+                        {
+                          "text": "Your Shopping Cart is empty!\n"
+                        },
+                        {
+                          "text": "Billing Address is written on that page: Billing address\n"
+                        },
+                        {
+                          "text": "Select Shipping Method is written on that page : Select shipping method\n"
+                        },
+                        {
+                          "text": "Select Payment Method is written on that page : Select payment method\n"
+                        },
+                        {
+                          "text": "Payment Information is written on that page : Payment information\n"
+                        },
+                        {
+                          "text": "Confirm Your Order is written on that page : Confirm your order\n"
+                        },
+                        {
+                          "text": "ThankYou Message is written on that page : Thank you\n"
+                        },
+                        {
+                          "text": "Order Information : Order information\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-21T05:58:21.924Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "F:\\BS_Playwright\\test-results\\test-checkoutDone-Page-obj-28543-ace-order-successfully-test-chrome\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e48b585e2cfc6f6af9fd-3d624a7e857f094e699d",
+              "file": "test/checkoutDone.test.ts",
+              "line": 55,
+              "column": 5
             }
           ]
         }
@@ -126,9 +272,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-21T03:23:13.292Z",
-    "duration": 14852.229,
-    "expected": 1,
+    "startTime": "2025-01-21T05:57:11.388Z",
+    "duration": 136462.263,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

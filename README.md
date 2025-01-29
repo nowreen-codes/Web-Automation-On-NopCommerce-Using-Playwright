@@ -20,19 +20,19 @@ We use fixtures to set up everything the test needs (like opening a browser) and
 ### Prerequisites:
 
 
-Editor: Visual Studio Code,
+- Editor: Visual Studio Code,
 
 
-Automation Framework: Playwright,
+- Automation Framework: Playwright,
 
 
-Programming Language: TypeScript,
+- Programming Language: TypeScript,
 
 
-Package Manager: npm (Node.js),
+- Package Manager: npm (Node.js),
 
 
-Reporting Tool: Allure
+- Reporting Tool: Allure
 
 
 ## Installation

@@ -36,7 +36,11 @@ Reporting Tool: Allure
 
 
 ## Installation
-1.Node.js and Editor installation: Ensure you have Node.js installed. If not then install it from this [site](https://nodejs.org/en) . After installation to check if node is already installed or not, type “node --version” to check what is the node version.
+1.Node.js and Editor installation: Ensure you have Node.js installed. If not then install it from this [site](https://nodejs.org/en) . After installation to check if node is already installed or not, type “node -v” to check what is the node version.
+
+```bash
+node -v
+```
 
 
 ![Screenshot 2025-01-20 104807](https://github.com/user-attachments/assets/01e3fe2d-c3f6-4998-8a9b-7d12cbb466eb)
@@ -52,16 +56,16 @@ It will pop up on such screen like below. Click on “OK”. It will start downl
 
 
 
-4.Clone the repository: git clone https://github.com/nowreen-codes/Web-Automation-On-NopCommerce-Using-Playwright.git
+4.Clone the repository: ```bash git clone https://github.com/nowreen-codes/Web-Automation-On-NopCommerce-Using-Playwright.git ```
 
 
-5.Navigate to the project directory: cd Web-Automation-On-NopCommerce-Using-Playwright
+5.Navigate to the project directory: ```bash cd Web-Automation-On-NopCommerce-Using-Playwright ```
 
 
-6.Install dependencies: npm install
+6.Install dependencies: ```bash npm install ```
 
 
-7.Install Playwright browsers: npx playwright install
+7.Install Playwright browsers:  ```bash npx playwright install ```
 
 
 ## Usage
@@ -70,20 +74,20 @@ It will pop up on such screen like below. Click on “OK”. It will start downl
 ### Run Tests
 
 
-Execute all tests: npx playwright test
+Execute all tests: ```bash  npx playwright test ```
 
 
 ### Set up Allure reports:
-1.Install the commandline: npm install -D allure-commandline
+1.Install the commandline: ```bash npm install -D allure-commandline ```
 
 
 ### Generate Allure Report
 1.Generate the report:
-npx allure generate ./allure-results --clean
+```bash   npx allure generate ./allure-results --clean ```
 
 
 2.Open the report:
-npx allure open ./allure-report
+```bash npx allure open ./allure-report ```
 
 
 ## Features
@@ -180,7 +184,7 @@ Contributions are welcome! Follow these steps:
 5. Open a pull request.
 
 ## Contact
-Nowreen Islam - [Linkdin](www.linkedin.com/in/nowreen-islam) 
+Nowreen Islam - [Linkdin](https://www.linkedin.com/in/nowreen-islam/) 
 
 
 ## Reference

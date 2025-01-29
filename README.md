@@ -56,16 +56,28 @@ It will pop up on such screen like below. Click on “OK”. It will start downl
 
 
 
-4.Clone the repository: ```bash git clone https://github.com/nowreen-codes/Web-Automation-On-NopCommerce-Using-Playwright.git ```
+4.Clone the repository: 
+```bash 
+git clone https://github.com/nowreen-codes/Web-Automation-On-NopCommerce-Using-Playwright.git
+```
 
 
-5.Navigate to the project directory: ```bash cd Web-Automation-On-NopCommerce-Using-Playwright ```
+5.Navigate to the project directory: 
+```bash 
+cd Web-Automation-On-NopCommerce-Using-Playwright
+```
 
 
-6.Install dependencies: ```bash npm install ```
+6.Install dependencies:
+```bash 
+npm install
+ ```
 
 
-7.Install Playwright browsers:  ```bash npx playwright install ```
+7.Install Playwright browsers:  
+```bash 
+npx playwright install
+ ```
 
 
 ## Usage
@@ -74,42 +86,52 @@ It will pop up on such screen like below. Click on “OK”. It will start downl
 ### Run Tests
 
 
-Execute all tests: ```bash  npx playwright test ```
+Execute all tests: 
+```bash  
+npx playwright test
+ ```
 
 
 ### Set up Allure reports:
-1.Install the commandline: ```bash npm install -D allure-commandline ```
+1.Install the commandline:
+```bash 
+npm install -D allure-commandline
+ ```
 
 
 ### Generate Allure Report
 1.Generate the report:
-```bash   npx allure generate ./allure-results --clean ```
+```bash   
+npx allure generate ./allure-results --clean
+```
 
 
 2.Open the report:
-```bash npx allure open ./allure-report ```
+```bash 
+npx allure open ./allure-report
+ ```
 
 
 ## Features
-Registration & Login: Automates user registration and login workflows.
+- Registration & Login: Automates user registration and login workflows.
 
 
-Add to Cart: Adds multiple products to the cart and adjusts quantities.
+- Add to Cart: Adds multiple products to the cart and adjusts quantities.
 
 
-Checkout & Order Confirmation: Completes purchases and verifies the order number.
+- Checkout & Order Confirmation: Completes purchases and verifies the order number.
 
 
-Validation: Ensures the correct page is triggered after interactions by comparing expected vs. actual results.
+- Validation: Ensures the correct page is triggered after interactions by comparing expected vs. actual results.
 
 
-JSON Data Storage: Simplifies data management for testing scenarios.
+- JSON Data Storage: Simplifies data management for testing scenarios.
 
 
-Terminal Output: Displays pass/fail results for quick verification.
+- Terminal Output: Displays pass/fail results for quick verification.
 
 
-Allure Reporting: Generates detailed reports for test execution.
+- Allure Reporting: Generates detailed reports for test execution.
 
 
 

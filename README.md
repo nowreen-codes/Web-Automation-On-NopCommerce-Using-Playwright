@@ -180,7 +180,7 @@ Contributions are welcome! Follow these steps:
 5. Open a pull request.
 
 ## Contact
-Your Name - [Linkdin](www.linkedin.com/in/nowreen-islam) 
+Nowreen Islam - [Linkdin](www.linkedin.com/in/nowreen-islam) 
 
 
 ## Reference
